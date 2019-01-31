@@ -1,0 +1,178 @@
+//@import url('https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300italic,500,700,900');
+
+//Avenir
+// @font-face {
+// 	font-family: 'Avenir-Heavy';
+// 	src: url('../fonts/avenir/Avenir-Heavy.eot'),
+// 		url('../fonts/avenir/Avenir-Heavy.woff') format('woff'),
+// 		url('../fonts/avenir/Avenir-Heavy.ttf') format('truetype');
+// 	font-weight: 900;
+// 	font-style: normal;
+// }
+
+@font-face {
+	font-family: 'Avenir-Bold';
+	src: url('../fonts/avenir/Avenir-Bold.eot'),
+		url('../fonts/avenir/Avenir-Bold.woff') format('woff'),
+		url('../fonts/avenir/Avenir-Bold.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-Regular';
+	src: url('../fonts/avenir/Avenir-Regular.eot'),
+		url('../fonts/avenir/Avenir-Regular.woff') format('woff'),
+		url('../fonts/avenir/Avenir-Regular.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-Medium';
+	src: url('../fonts/avenir/Avenir-Medium.eot'),
+		url('../fonts/avenir/Avenir-Medium.woff') format('woff'),
+		url('../fonts/avenir/Avenir-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenir-Roman';
+	src: url('../fonts/avenir/Avenir-Roman.eot'),
+		url('../fonts/avenir/Avenir-Roman.woff') format('woff'),
+		url('../fonts/avenir/Avenir-Roman.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+// @font-face {
+// 	font-family: 'Avenir-Light';
+// 	src: url('../fonts/avenir/Avenir-Light.eot'),
+// 		url('../fonts/avenir/Avenir-Light.woff') format('woff'),
+// 		url('../fonts/avenir/Avenir-Light.ttf') format('truetype');
+// 	font-weight: 900;
+// 	font-style: normal;
+// }
+// @font-face {
+// 	font-family: 'AvenirBook';
+// 	src: url('../fonts/avenir/Avenir-Book.eot'),
+// 		url('../fonts/avenir/Avenir-Book.woff') format('woff'),
+// 		url('../fonts/avenir/Avenir-Book.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+// @font-face {
+// 	font-family: 'AvenirMedium';
+// 	src: url('../fonts/avenir/Avenir-Medium.eot');
+// 	src: url('../fonts/avenir/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+// 		url('../fonts/avenir/Avenir-Medium.woff') format('woff'),
+// 		url('../fonts/avenir/Avenir-Medium.ttf') format('truetype');
+// 	font-weight: 500;
+// 	font-style: normal;
+// }
+
+// @font-face {
+// 	font-family: 'AvenirRoman';
+// 	src: url('Avenir-Roman.eot');
+// 	src: url('Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+// 		url('Avenir-Roman.woff') format('woff'),
+// 		url('Avenir-Roman.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+
+$base_height: 6px;
+
+$si: 6px;
+
+//Theme Specific Colors
+$base_color: #003C8A;
+$base_accent: #343D5C;
+
+//$light_color: #F4F4F9;
+$light_color:#F7F8FA;
+$light_accent: #E2E2E8;
+
+$dark: #232228;	
+
+$light_border_color: #eee;	
+
+$text_color: $base_color;
+$text_gray: #474747;
+
+$gradient_1: linear-gradient(to right, rgba(#4b6cb7, 1), rgba(#182848, 1));
+$gradient_2: linear-gradient(to right, rgba(#7474BF, 1), rgba(#348AC7, 1));
+$gradient_3: linear-gradient(to right, rgba(#24C6DC, 1), rgba(#514A9D, 1));
+$gradient_4: linear-gradient(to right, rgba(#5C258D, 1), rgba(#4389A2, 1));
+
+// ==========================================================================
+// Base – Variables
+// ==========================================================================
+
+// $heading_font: 'Poppins', sans-serif;
+$heading_font: "Montserrat", sans-serif;
+$body_font: 'Avenir-Regular', sans-serif;
+
+$base-font-size: calc($si * 3);
+
+// Blockquotes
+$base-blockquote-font-family:                   $body_font !default;
+$base-blockquote-font-size:                     22 !default;
+$base-blockquote-line-height:                   28 !default;
+
+// Code
+$base-code-font-family:                         monospace, monospace !default;
+$base-code-font-size:                           13 !default;
+$base-code-line-height:                         18 !default;
+$base-code-color:                               #000 !default;
+$base-code-background-color:                    transparent !default;
+$base-code-border-color:                        #d7d7d7 !default;
+
+
+// Grid Alignment
+$grid-alignment:                                left;
+
+// Grid Containers
+// $container:                                     100% !default;
+// $container-m:                                   720px !default;
+// $container-l:                                   960px !default;
+// $container-xl:                                  1120px !default;
+
+
+// $container:                                     100% !default;
+// $container-m:                                   720px !default;
+// $container-l:                                   960px !default;
+// $container-xl:                                  1120px !default;
+// $container-xxl:                                 1240px !default;
+
+$container:                                     100% !default;
+$breakpoint-xs:									690px !default;
+$container-s:									768px !default;
+$container-dz:									960px !default;
+$container-m:                                   1024px !default;
+$container-l:                                   1120px !default;
+$container-xl:                                  1240px !default;
+$container-xxl:                                 1240px !default;
+
+// Grid Gutters
+$grid-gutter:                                   15px !default;
+$grid-gutter-xs:                                 15px !default;
+$grid-gutter-s:                                 15px !default;
+$grid-gutter-dz:                                15px !default;
+$grid-gutter-m:                                 15px !default;
+$grid-gutter-l:                                 15px !default;
+$grid-gutter-xl:                                15px !default;
+$grid-gutter-xxl:                               15px !default;
+
+// Responsive Breakpoints
+$breakpoint-xs:                                  ($container-xs + 20) !default;
+$breakpoint-s:                                  ($container-s + 20) !default;
+$breakpoint-m:                                  ($container-m + 20) !default;
+$breakpoint-dz:                                 ($container-dz + 20) !default;
+$breakpoint-l:                                  ($container-l + 20) !default;
+$breakpoint-xl:                                 ($container-xl + 20) !default;
+$breakpoint-xxl:                                 ($container-xxl + 20) !default;

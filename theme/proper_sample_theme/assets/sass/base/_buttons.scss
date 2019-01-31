@@ -1,0 +1,174 @@
+// ==========================================================================
+// Base – Assets
+// ==========================================================================
+
+// Custom Buttons
+.btn {
+  cursor: pointer;
+  border: 0px solid #d7d7d7;
+  background-color: #f3f3f3;
+  line-height: normal;
+  padding: 9px 18px;
+  text-decoration: none;
+  color: #363636;
+  font-size:15px;
+  font-weight:500;
+  display: inline-block;
+  transition: all 0.1s;
+  &:hover, &:active { text-decoration: none; }
+  &:hover { background: #f9f9f9; }
+
+  &.primary {
+    // Add your styles here
+    background:$base_color;
+    color:#fff;
+    &:hover { background: $base_accent; }
+  }
+  &.secondary {
+    // Add your styles here
+  }
+}
+
+
+
+.round-btn{
+  border-radius:35px;
+  display:inline-block;
+  padding:9px 24px;
+  font-size:16px;
+  font-weight:500;
+  overflow:hidden;  
+  font-family:$heading_font;
+  transition:all .2s ease-in;   
+    &.white{
+      border:1px solid #fff;        
+      color:#fff; 
+      &:hover{
+        transition:all .2s ease-in;
+        background:#fff;
+        color:$base_color;  
+      }  
+    }
+    &.blue{
+      border:1px solid $base_color;        
+      color:#fff; 
+      background:$base_color;
+      &:hover{
+        border:1px solid $base_color;
+        transition:all .2s ease-in;
+        background:#fff;
+        color:$base_accent;  
+      }  
+    }
+    &.border{
+      border:2px solid $base_color;
+      background:rgba($base_color, 0);
+      color:$base_color;
+
+      &:hover{
+        background:rgba($base_color, 1);
+        color:#fff;
+      }
+
+      &.white{
+        border:2px solid #fff;
+        color:#fff;
+
+        &:hover{
+          background:rgba(#fff, 1);
+          color:$base_color;
+        }
+      }
+      &.blue{
+        border:2px solid $base_color;
+        color:$base_color;
+
+        &:hover{
+          background:rgba($base_color, 1);
+          color:#fff;
+        }
+      }
+      
+    }
+} 
+
+
+.flat-btn{
+  border-radius:3px;
+  display:inline-block;
+  padding:12px 30px;  
+  font-weight:bold;
+  border:0;  
+  text-transform:uppercase;
+  font-size:16px;  
+  overflow:hidden;  
+  text-wrap:nowrap;
+  position:relative;  
+  top:0px;  
+  // margin-top:2px;  
+  transition:all .15s ease-in; 
+  clear:both;   
+  font-weight:bold !important;  
+  box-shadow:0 3px 12px rgba(#000, 0);  
+  letter-spacing:3.5px;  
+  &:before{
+    content:"";
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(to right, rgba(#f0f0f0, .5), rgba(#fff, .2), rgba(#f0f0f0, .6));
+    opacity:.5;
+    transform:rotate(45deg);  
+    position:absolute;
+    top:0;
+    left:-100%;  
+    transition:all 0s ease-in;
+  }
+  &:hover{
+    &:before{
+      left:100%;
+      transition:all .5s ease-in;  
+    }
+    box-shadow:0 3px 12px rgba(#000, .2);  
+  }  
+  &.blue{
+    background:linear-gradient($base_color, darken($base_color,2));
+    color:$light_color;  
+       &:hover{      
+        // margin-top:0px;  
+        
+        transition:all .15s ease-in;
+      }  
+  }  
+  &.light{
+    background:$light_color;
+    color:$base_color;   
+  }
+  &.light-accent{
+    background:$light_color;
+    color:$base_color;
+      &:hover{            
+      transition:all .15s ease-in;      
+    }  
+  }    
+  &:hover{    
+    transition:all .15s ease-in;
+  }  
+  &.small{
+    font-size:13px;
+    padding:12px 20px;  
+  }
+  &.med{
+    font-size:14px;
+    padding:13px 24px;  
+  }
+}    
+
+.buttons{
+  &.center{
+    text-align:center;
+    a,button{
+      margin:0 6px;
+      font-weight:300;  
+    }
+  }
+}

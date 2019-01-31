@@ -1,0 +1,76 @@
+# Copyright (C) 2016 WP Fastest Cache
+# This file is distributed under the same license as the WP Fastest Cache package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Fastest Cache 0.8.5.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-fastest-cache\n"
+"POT-Creation-Date: 2016-01-20 01:37+0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-01-20 01:38+0200\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.6\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: tr\n"
+
+#: wpFastestCache.php:1112
+msgid "Once Every 1 Minute"
+msgstr ""
+
+#: wpFastestCache.php:1118
+msgid "Once Every 5 Minutes"
+msgstr ""
+
+#: wpFastestCache.php:1124
+msgid "Once Every 15 Minutes"
+msgstr ""
+
+#: wpFastestCache.php:1130
+msgid "Twice an Hour"
+msgstr ""
+
+#: wpFastestCache.php:1136
+msgid "Once an Hour"
+msgstr ""
+
+#: wpFastestCache.php:1142
+msgid "Once Every 6 Hours"
+msgstr ""
+
+#: wpFastestCache.php:1148
+msgid "Once a Day"
+msgstr ""
+
+#: wpFastestCache.php:1154
+msgid "Once a Week"
+msgstr ""
+
+#: wpFastestCache.php:1160
+msgid "Once a Month"
+msgstr ""
+
+#: wpFastestCache.php:1166
+msgid "Once a Year"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Fastest Cache"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://wordpress.org/plugins/wp-fastest-cache/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "The simplest and fastest WP Cache system"
+msgstr "En basit ve en hızlı WP cache sistemi"
+
+#. Author of the plugin/theme
+msgid "Emre Vona"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://tr.linkedin.com/in/emrevona"
+msgstr ""

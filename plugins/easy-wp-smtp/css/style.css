@@ -1,0 +1,81 @@
+/**
+ * Settings page
+ */
+#swpsmtp_settings_form input[type='text'],
+#swpsmtp_settings_form input[type='password'],
+#swpsmtp_settings_form input[type='email'],
+#swpsmtp_settings_form input[type='text']
+{
+    width: 350px;
+}
+textarea#swpsmtp_message{
+    width: 350px;
+}
+
+.swpsmtp-yellow-box{
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: #FFFFE0;
+    border-color: #E6DB55;
+    border-radius: 3px 3px 3px 3px;
+    border-style: solid;
+    border-width: 1px;
+}
+div.swpsmtp-tab-container, #swpsmtp-save-settings-notice {
+    display: none;
+}
+#swpsmtp-spinner {
+    float: none;
+    vertical-align: top;
+}
+div.swpsmtp-tab-container {
+    padding-top: 10px;
+}
+.swpsmtp-stars-container {
+    text-align: center;
+    margin-top: 10px;
+}
+.swpsmtp-stars-container span {
+    vertical-align: text-top;
+    color: #ffb900;
+}
+.swpsmtp-stars-container a {
+    text-decoration: none;
+}
+.swpsmtp-settings-grid {
+    display:inline-block;
+}
+.swpsmtp-settings-main-cont {
+    width: 80%;
+}
+.swpsmtp-settings-sidebar-cont {
+    width: 19%;
+    float: right;
+    padding-top: 10px;
+}
+
+div.swpsmtp-msg-cont {
+    clear: both;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    background-color: #ffffe0;
+}
+div.swpsmtp-msg-cont.msg-error {
+    border-left: 5px solid red;
+}
+div.swpsmtp-msg-cont.msg-success {
+    border-left: 5px solid green;
+}
+
+#swpsmtp-debug-log-cont {
+    display: none;
+}
+
+@media (max-width: 782px) {
+    .swpsmtp-settings-grid {
+	display: block;
+	float: none;
+	width: 100%;
+    }
+}

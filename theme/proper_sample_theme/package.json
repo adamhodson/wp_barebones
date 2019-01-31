@@ -1,0 +1,35 @@
+{
+  "name": "HTMLFramework",
+  "version": "0.0.1",
+  "description": "desc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Proper Noun - Adam Hodson",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "*",
+    "del": "*",
+    "grunt": "*",
+    "grunt-contrib-compass": "*",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "*",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "*",
+    "gulp-compass": "*",
+    "gulp-concat": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*"
+  },
+  "dependencies": {
+    "feather-icons": "^4.10.0",
+    "gulp-imagemin": "*",
+    "imagemin-pngquant": "*"
+  }
+}

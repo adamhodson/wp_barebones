@@ -1,0 +1,560 @@
+/* Set the size and font of the tab widget */
+.tabGroup {
+    background: none repeat scroll 0 0 #F3F1EB;
+    border: 1px solid #DEDBD1;
+    padding: 10px;
+    width: 750px;
+    height: auto;
+    float: left;
+}
+
+.tabGroup div.questionCon{
+    width: 100%;
+    float: left;
+    padding-top: 5px;
+    line-height: 18px;
+}
+
+.tabGroup select, .tabGroup label, .tabGroup div {
+    font-size: 12px;
+    
+}
+.tabGroup > label{
+    font-weight: normal !important;
+    margin-bottom: 0 !important;
+}
+
+div.inputCon label{
+    font-weight: normal !important;
+    margin-bottom: 0 !important;
+}
+
+div.questionCon.qsubmit{
+    text-align: center;
+}
+
+.tabGroup div.questionCon.disabled{
+    color: #888;
+}
+
+.tabGroup div.question{
+	padding-right: 10px;
+    float: left;
+    text-align: right;
+    width: 130px;
+    font-weight: normal !important;
+    background: none !important;
+}
+
+.tabGroup div.inputCon{
+    float:left;
+}
+  
+/* Configure the radio buttons to hide off screen */
+.tabGroup > input[type="radio"] {
+    position: absolute;
+    left:-100px;
+    top:-100px;
+}
+  
+/* Configure labels to look like tabs */
+.tabGroup > input[type="radio"] + label {
+    /* inline-block such that the label can be given dimensions */
+    display: inline-block;
+  
+    /* A nice curved border around the tab */
+    border: 1px solid #DEDBD1;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+      
+    /* the bottom border is handled by the tab content div */
+    border-bottom: 0;
+  
+    /* Padding around tab text */
+    padding: 5px 10px;
+  
+    /* Set the background color to default gray (non-selected tab) */
+    background-color:#ddd;
+    color: black;
+    box-shadow: none !important;
+}
+  
+/* Focused tabs need to be highlighted as such */
+.tabGroup > input[type="radio"]:focus + label {
+    border:1px dashed #DEDBD1;
+}
+  
+/* Checked tabs must be white with the bottom border removed */
+.tabGroup > input[type="radio"]:checked + label {
+    background-color:white;
+    font-weight: bold;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+}
+  
+/* The tab content must fill the widgets size and have a nice border */
+.tabGroup > div {
+    display: none;
+    border: 1px solid #DEDBD1;
+    background-color: white;
+    padding: 10px 0px;
+    height: auto;
+    overflow: auto;
+    margin-top: -1px;
+      
+    border-radius: 0 5px 5px 5px;
+    -moz-border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;
+}
+  
+/* This matchs tabs displaying to thier associated radio inputs */
+#wpfc-options:checked ~ .tab1, #wpfc-deleteCache:checked ~ .tab2, #wpfc-cacheTimeout:checked ~ .tab3, #wpfc-imageOptimisation:checked ~ .tab4, #wpfc-premium:checked ~ .tab5, #wpfc-exclude:checked ~ .tab6 , #wpfc-cdn:checked ~.tab7, #wpfc-db:checked ~.tab8{
+    display: block;
+}
+/* for lef panel */
+#toplevel_page_wpfastestcacheoptions img{
+    padding: 0 !important;
+    margin-left: 5px !important;
+}
+#toplevel_page_wpfastestcacheoptions div.wp-menu-name{
+    margin-left: 0 !important;
+}
+.question:after {
+    content: ":";
+}
+.inputCon input[type="checkbox"]{
+    margin-right: 5px;
+}
+.get-info {
+    float: left;
+    padding-left: 10px;
+}
+#rule-help-tip {
+    width: 500px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: 4px 4px 10px #CCCCCC;
+    display: block;
+    padding: 10px 10px 0;
+    position: absolute;
+}
+
+#rule-help-tip h4 {
+    color: #6397CB;
+    margin-top: 0;
+    font-size: 14px;
+    letter-spacing: -1px;
+}
+h1.summary-rec {
+    border-bottom: 0 none;
+    color: #777777;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: normal;
+    margin: 0 0 0.5em;
+}
+
+.close-window {
+    background: url("../images/close-wiz-sprite.png") no-repeat scroll 0 -19px rgba(0, 0, 0, 0);
+    height: 19px;
+    width: 22px;
+    float: right;
+}
+.omni_admin_sidebar {
+    float: right;
+    font-family: "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+    font-size: 12px;
+    margin-right: 50px;
+    width: 222px;
+}
+
+.omni_admin_sidebar_section {
+    background-color: #F6F6F6;
+    border: 1px solid #CCCCCC;
+    float: left;
+    margin: 0 0 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.omni_admin_sidebar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.omni_admin_sidebar li {
+    font-size: 11px;
+    line-height: 16px;
+    list-style: disc outside none;
+    margin: 5px 0 5px 20px;
+}
+
+.omni_admin_sidebar h3 {
+    margin: 0 0 10px;
+}
+.omni_admin_sidebar_section label {
+    font-size: 11px;
+}
+
+#vote-us{
+    border-color: #D09847; 
+    background: url("../images/facebook-like-xxl.png") #E39124 no-repeat 103% 130%; 
+    background-size: 30%;
+    cursor: pointer;
+}
+
+#wpfc-beta{
+    padding-right: 5px;
+    font-weight: bold;
+    color: red;
+}
+
+#deleteCron{
+    float:right;
+    margin-right:5px;
+    padding: 3px;
+}
+
+#deleteCron:hover{
+    background-color:#FAEBD7;
+}
+form.delete-line{
+    height: 100px;
+    width: 100%;
+    float: left;
+}
+form.delete-line .left{
+    width: 25%;
+    float: left;
+}
+form.delete-line .right{
+    width: 75%;
+    float: left;
+}
+
+form.delete-line .left .submit{
+    padding-top: 0;
+    float: left;
+    padding-left: 20px;
+}
+form.delete-line .left .submit input{
+    height: 65px;
+    width: 165px;
+    white-space: pre-line !important;
+}
+.revert{
+    width:16px;
+    height:16px;
+    vertical-align: middle;
+    margin: auto;
+    position:relative;
+    cursor:pointer;
+    
+    -moz-border-radius: 3px 3px;
+    -webkit-border-radius: 3px 3px;
+    border-radius: 3px 3px;
+    border:1px solid #aaa;
+    background:#ddd;
+    padding:3px;
+    
+    background: rgb(255,255,255) url("../images/cancel.png") no-repeat center; /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%) url("../images/cancel.png") no-repeat center; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))) url("../images/cancel.png") no-repeat center; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%) url("../images/cancel.png") no-repeat center; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%) url("../images/cancel.png") no-repeat center; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%) url("../images/cancel.png") no-repeat center; /* IE10+ */
+    background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%) no-repeat center; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ) url("../images/cancel.png") no-repeat center; /* IE6-9 */
+}
+
+.revert:hover{
+    border-color:#000;
+    
+    background: rgb(255,255,255) url("../images/cancel.png") no-repeat center; /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%) url("../images/cancel.png") no-repeat center; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))) url("../images/cancel.png") no-repeat center; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%) url("../images/cancel.png") no-repeat center; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%) url("../images/cancel.png") no-repeat center; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%) url("../images/cancel.png") no-repeat center; /* IE10+ */
+    background: linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%) url("../images/cancel.png") no-repeat center; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ) url("../images/cancel.png") no-repeat center; /* IE6-9 */
+}
+
+.revert:active{
+    background-color: #F5F5F5;
+}
+
+#revert-loader{
+    display: none;
+    background: rgba(255, 255, 255, .7) url(../images/loader.gif) no-repeat center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+}
+.wpfc-loading-statics{
+    background-repeat: no-repeat;
+    background-image: url(../images/loader-statics.gif);
+    background-position: 0 0;
+}
+div.wpfc-loading-statics{
+    height: 16px;
+}
+p.wpfc-loading-statics{
+    background-position: 44px 6px;
+    height: 27px;
+}
+#wpfc-optimized-statics-reduction:not(.wpfc-loading-statics):after{
+    content: " KB";
+}
+#wpfc-statics-right ul li{
+    height:35px;
+    padding:0;
+    margin-bottom:15px;
+    width:150px;
+}
+#wpfc-statics-right ul:last-child{
+    padding-left: 10px;
+}
+#wpfc-statics-right ul:last-child li{
+    width: 220px;
+    height: auto;
+}
+
+span.deleteicon {
+    position: relative;
+}
+span.deleteicon input {
+    padding-right: 16px;
+}
+span.deleteicon span {
+    position: absolute;
+    display: block;
+    top: 0px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    background: url("../images/search_reset.jpg") no-repeat scroll;
+    cursor: pointer;
+}
+span.deleteicon span.cleared {
+    background: none;
+}
+#wpfc-image-list-filter:-moz-focusring, #wpfc-image-per-page:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+#buy-image-credit{
+    border: 1px solid; 
+    color: white; 
+    border-radius: 26px; 
+    background-color: rgb(61, 207, 60); 
+    cursor: pointer; 
+    padding: 5px 15px;
+    margin-left: 5px;
+}
+.wpfc-exclude-rule-line{
+    float: left;
+    width: 100%;
+    height: 40px;
+}
+.wpfc-exclude-rule-line-left{
+    width: 100px;
+    float: left;
+}
+.wpfc-exclude-rule-line-middle{
+    /*width: 400px;*/
+    float: left;
+}
+.wpfc-exclude-rule-line-add, .wpfc-exclude-rule-line-delete{
+    float: left;
+    padding-top: 7px;
+    cursor: pointer;
+    width: 20px;
+}
+.wpfc-exclude-rule-line-delete{
+    display: none;
+}
+#integrationDiv {
+    display: block;
+    font-family: "Lucida Grande","Lucida Sans","Lucida Sans Unicode",Verdana,Tahoma,sans-serif;
+    font-size: 13px;
+    height: auto;
+    line-height: 18px;
+    max-height: 395px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+}
+.wpfc-timeout-item, .wpfc-exclude-item, .int-item{
+    background: url(data:image/gif;base64,R0lGODlhAQAkANUAAAAAAP/////+//38/fb19vX09fDv8Pr6+/n5+vb29/Hx8u/v8Pv8/Pn6+vLz8vv7+vj49/T08/Pz8vLy8f/+/v38/Pn4+PHw8P7+/v39/fv7+/j4+Pf39/b29vPz8/Hx8fDw8P///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAACEALAAAAAABACQAAAYiwICAgsFkMpUBQ/M4IBqWDYST6BAKhYjHIZkoPp8LaGEIAgA7) repeat-x scroll center bottom transparent !important;
+    border: 1px solid #CCCCCC !important;
+}
+.wpfc-timeout-item:hover, .wpfc-exclude-item:hover, .int-item:hover{
+    border:1px solid #ccc;
+    background:#f5f5f5 none repeat scroll 0 0 !important;
+}
+.int-item, .wpfc-timeout-item, .wpfc-exclude-item {
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 7px;
+    overflow: hidden;
+    padding: 12px;
+    float: left;
+    width: 328.5px;
+}
+.int-item{
+    padding: 12px 8px 12px 12px !important;
+}
+.int-item-left{
+    margin-right: 7px;
+}
+.int-item:hover {
+    background: none repeat scroll 0 0 rgba(135, 135, 135, 0.1);
+}
+.int-item h2 {
+    font-size: 14px;
+    margin: 0 0 3px;
+}
+.int-item p {
+    color: #666;
+    font-size: 11px;
+    margin: 0;
+    position: relative;
+}
+.int-item img {
+    float: left;
+    margin-right: 12px;
+    height: 45px;
+    width: 45px;
+}
+.int-item .meta.isConnected{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAACA0lEQVQ4EaVUy23bQBCd4SdAbipB7oC+BVEOVAURO5BLSAWxKohdgZ0KyFRgArEN36wS7A50C2BKmLy30lJriZRiZw7a3bczT2/nQ5UD9lJ+zkQ0V9GBdzOxxUpW1cfi4clju6vuAjyDbBqpfjeRYdf9BqvFdJYWt/WuzytSK/PBUl+uoG6y69h3BsF1bOk3LeqF94n8Zk3Y3LyFkLF4zXSpjNtaS4qLEjBy+C7Lml+jHz7SPZ85VFU8+z/NdMwcO6UsyjvoFmZ2KioXbaya44nYNna4ym1MsJknlp58KO7najII8PxP+WkIpZoH4NEtqw3CMavNtEHQNAxKJc2SdWPjKjAGmumzbJ7TXqEvk+L2nOe+OmA4srb6dPQGwp9I+DmaewyM/bdQiwqH4dBHiCtnnaRQWDI3rCRzt7TVaVL8rhjRlF/yY52ScJZdX63/xP8OEo1LDITLHUCqpcKMf+idulakcw6lVnddAsvCSSEhFN4AD6u9FxpLXDuRTTV6JMmeBwAWrbHVDMrpc5AQAqt0cl+4nKIIsy5CYmyZfyOkc3TJGEfKIlARgR47ohBRmCwWlvGOlBt+vrDMuX+rUVD69Y7xzlpSToiblMOKfdx2hcJkcne2BVwdwuN6z17cTFO+f+sRq5hD/2SPcoXyfuMAxBLlKtHQe7EPXdsEX3p/59e/YUe3GmOE5VkAAAAASUVORK5CYII=") no-repeat scroll 0 0;
+    height: 21px;
+    width: 21px;
+    position: relative;
+    top: -8px;
+    left: 312px;
+}
+.int-item .meta.success{
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAAsTAAALEwEAmpwYAAADb0lEQVQ4Ea2VS0iUURTH7+v7dAwnLMhWjURRm4IeOtEmS4VQ6GFNUYFG+UCooDYlBAktCqIXRVEUvaggqVQoNzallGiboKIWvSha5MLSMZ2Z7746Z9JptLEHdQbmu9+95/+7595z7v0oSWOFDUTkFqwKTPQ7Qa7oIkN4kFIzw1r2mhHdrYXt6o/I7p7HTe8fNBA1FkHHdmxoXpHrnzhhCyV2D+PUT+xYD3gHldYmYik5MNAXvXB9ZUtPqlcqlFa1rZgjfFlHBeXLrDbEpgMOqykoKWdEWR1W0aGd54pbnsFQQpGEbutcOcdY3yXhOPNU7KcVpQYyqi0yBVFSPmE0WnlycTOCCcO/iraiyVq5J/4WiNuAAaAO9chBHi9sKBRT8qbucFyxVXsa+/7YDCGSc8q1hFQKkUeJ+yU770UXCxQEApzZPVb9YgPTTGOs7pADg8VK6lbmMIJ6anl9oKAywLL8Q0EmqN+mTfMYGiYHNsxa0zlg1KbzZS0dWulTylNR3EgOnAQPZggSWEfSQMgEeCRTODyC/ZBto02n9syGq0tvfaxuK893MsRexxE+a2ClwEEes8RZlArEtpbqHQaOZZMweHKYSEr5SA9GKs6WNH6oC4cWOBnuKeGKoFY/okIeA+pMFFL4WQNxKHLwq+eVgeMRjBb7OUQoY/FL8Z6va8+Wtr6pvR9aDrPcgOQsVPHRyUUeM5S8QqilFjNIldFPr5Tcfhnvj++HU3NG+DiRnursj3i7L667+6nmQflSSukx7rLpWo4GIgd5jBLZhS+4XAuHG4I6VNu+rvTi6qY+1RfdFx2M74qrWDUexar20DLGxEnhOrMMlFE6Qx6texjaSIm4OpIsyikxnuqF81d5uqTxDgmFOGls1FXhNaWCu4eFw2ablD0cBcbKIGoTG4pkdRtlI7h3aFZDvTl8MnHFlZpwqAz7ajrWz3eFOO644wNRr4GDPJ4zM2cgZ1q2FS4rSpRFggwJYsQH1Vy8IJ9FBaX13BFz8eSMZ1iGkOWGt4+utSbCwzM7wZ1008nMXJJ6meDszMWqgASMt2SYBS8VGYu1D3qf11wuvtcLu0AINrjwtuNtgw4jhqcMCv23QNShHjmoTUCxAdfWcy86tNmTMoxLSRY+DqYxHEc/9Ecd6kfcvmdn5A2e//vmT6L/9Rv1DasAwJ2jW2dLAAAAAElFTkSuQmCC') no-repeat scroll 0 0;
+    height: 21px;
+    width: 21px;
+    position: relative;
+    top: -8px;
+    left: 312px;
+}
+.int-item .meta.warning{
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAlpJREFUOBGtlb9vE1EMx+333p3aQg8BAhYoUtOOHahEErEASf+ADjCDkGBjYGPsxsjABgNiAgmGDpVYmkIWlDCEASYKrfixAAKhS9JWee+esSNdiAJpSYKnnJ+/n/Pz2Q7CX+zZOTAZdeakUZM5giSPSuUQcIaA3pH3VQRdcb5efe9ffDj/HFwvAnsdG8XcsQl98AoDbiqFEcEfIewh8J5iDcmtRlK/P12qfunmdCtwo1ic2xeEtw1iISEWdkf2/Fb8rBHBEa01bevGdKn0ml0kYR3op4WFuXFjHiDqU5Z2w4nstwWogCh5te3cpROrqwIGeSF8LmYPBwrvDAoUrSQgOtELR3xqCcAYfehaYMKzg2Qo4tREJ3qD0VX5yPixUMgEQVjTSkWe6zisKa5v4n1sbWveGBXkuOCRTxLm/Xste1/uuZKSGDHPgPI5cWAUAR49wgXRHD9IxvytfQL09Rv4RoP1nqGEeRwbg+DiBQgXFwGDcGAo2Ra0lpfBPnwE0GzmuSVpFib3g56fb9+Itrd6b7b3szFtvV1ZAdxqzBoiXId6I5vUaqCnpgDHJ4bKVPTM4Z7FdQNIFdrZydrHT8CVyyPVlDk8TlQx4FVV8Qj4OAaKf+591b4RChSDPPOM87aKFMZaa+7T9oD1le12kPap8PSBzc366cwMGa2KozS/kSydXXqblJ7KmDqX/LhrXassy2EYE53oHcX3ZL+2KcdLL79bT9dl2wwKTreU6IUjSXVS47X1hgf3siO/FvAcdw76pC7nEifxohN9GtrZp6njf2/+lAuj/kf9ArVlQDDNYNOoAAAAAElFTkSuQmCC') no-repeat scroll 0 0;
+    height: 21px;
+    width: 21px;
+    position: relative;
+    top: -8px;
+    left: 312px;
+}
+.int-item .app {
+    float: left;
+    /*padding-right: 10px;*/
+    width: 75%;
+}
+.int-item .app .more-info {
+    cursor: auto;
+    float: none;
+    height: auto;
+    margin-left: 10px;
+    width: auto;
+}
+.int-item .meta {
+    font-size: 11px;
+    font-weight: bold;
+    max-width: 100px;
+    text-align: right;
+}
+.int-item .meta .developer {
+    color: #333333;
+    display: block;
+}
+#wpfc-premium-container{
+    overflow: hidden;
+}
+.wpfc-premium-step{
+    width: 246px;
+    float: left;
+    margin-left: 3px;
+}
+.wpfc-premium-step div{
+    float: left !important;
+}
+.wpfc-premium-step-header{
+    width: 100%; 
+    background-color: rgb(58, 158, 235); 
+    padding-top: 12px;
+    padding-bottom: 11px;
+    text-align: center;
+}
+.wpfc-premium-step-header label{
+    font-size: 17pt !important;
+    color: white !important;
+    font-weight: normal !important;
+    margin-bottom: 0 !important;
+}
+.wpfc-premium-step-content{
+    font-size: 16px !important;
+    line-height: 20px !important;
+    padding-top: 25px !important;
+    padding-left: 25px !important;
+    height: 100px;
+}
+.wpfc-premium-step-footer p{
+    font-size: 15px !important;
+}
+.wpfc-premium-step-footer ul li{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowNDgwMTE3NDA3MjA2ODExOEMxNEJENkJCQTMxQTY0OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowNDA0MUQ4RTAxMjUxMUUzQUNBOEExQjA5MUZCRkI2OCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowNDA0MUQ4RDAxMjUxMUUzQUNBOEExQjA5MUZCRkI2OCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjYzNDYwOTkyMEYyMDY4MTE4NzFGQ0NDRDhCOTMyRDhEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjA0ODAxMTc0MDcyMDY4MTE4QzE0QkQ2QkJBMzFBNjQ5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U7CKjQAAAX1JREFUeNpiZFj/gYES8D+AH85m3PBREEj1AbEHEO8E4kIWBioBoOEaQGoBEJtDheKB+AcLlQx3AVKrgVgATSqCiQqGRwOpTVgMB4HjlFqQAcRLgJgTi9wXIC6hxIIqIJ6OR74AmACukmtBJRC34pGfDTR8LohBjgVlQNyGR/44EGfCODALhIHYFYj5CBheDMSdeOTvA3EI0PV/kS0wAOKTQLwLShvj0AxyVQ8ew0GRGg40/BmyIMiCSUCsDOWDMstmIFZH0xwHxNMI+C4KaPhpdEGQBWpoYpJAvAWIZaD8UCBeSMDwOKDhm7FJgCyYh0VcBYg3AHENEK8gYHgR0PDFODMisLADZZJj0LggFYDS+kR8CkA++A7ECVCaFJAPxBMJKYIl04tAnEiC4enQxMFArAUgsBKImwmo/woqIYF4FrEuQc/JdUC8DIfat0DsA3UIA7kWwCqKPWhiR4HYBIgPkJoKsFnwB4jDgHg5EL8A4jlA7A3ED8gpFQECDADtslAckBdkiwAAAABJRU5ErkJggg==") no-repeat scroll 0 2px transparent;
+    padding: 3px 30px;
+    font-size: 15px;
+}
+.wpfc-premium-step-footer{
+    padding-left: 25px;
+}
+.wpfc-premium-step-image{
+    width: 100%; 
+    height: 180px;
+    text-align: center;
+}
+.wpfc-form-spinner, .wpfc-form-spinner-input-td, .wpfc-form-spinner-number, .wpfc-form-spinner-up, .wpfc-form-spinner-down{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+
+.exclude_section_clear {
+    background: none;
+    border-bottom: 1px solid #e6e6e6;
+    clear: both;
+    float: left;
+    marig-left: 1px;
+    margin-bottom: 0px;
+    margin-top: 16px;
+    overflow: auto;
+    position: relative;
+    width: 97%;
+}
+.error-wpfc{
+    border-color: #D8000C !important;
+    color: #D8000C !important;
+    background: #FFBABA url("") no-repeat 10px !important;
+}
+.success-wpfc, .error-wpfc{
+    background-position: 10px center !important;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+}
+.success-wpfc{
+    border-color: #4F8A10 !important;
+    color: #4F8A10 !important;
+    background: #DFF2BF url("") no-repeat 10px !important;
+}
+.success-wpfc p, .error-wpfc p{
+    padding: 2px 2px 2px 0px !important;
+}
+/* input[type=checkbox]:checked:before {  color: #e14d43;} */

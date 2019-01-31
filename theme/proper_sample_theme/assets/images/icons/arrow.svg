@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="100%" viewBox="0 0 22 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Shopping-Cart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1253.000000, -865.000000)" fill="#FFFFFF" fill-rule="nonzero" id="Checkout/Payment-04">
+            <g transform="translate(0.000000, 127.000000)">
+                <g id="Button" transform="translate(865.000000, 715.000000)">
+                    <path d="M409.707,31.293 L402,23.586 L400.586,25 L406.586,31 L389,31 C388.447,31 388,31.448 388,32 C388,32.552 388.447,33 389,33 L406.586,33 L400.586,39 L402,40.414 L409.707,32.707 C410.098,32.316 410.098,31.684 409.707,31.293 Z" id="Arrow"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

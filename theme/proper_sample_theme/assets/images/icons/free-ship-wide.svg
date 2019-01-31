@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="288px" height="33px" viewBox="0 0 288 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Product-View" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Product-Details" transform="translate(-981.000000, -441.000000)">
+            <g id="Product-First-Sec" transform="translate(0.000000, 129.000000)">
+                <g id="Add-Sec" transform="translate(440.000000, 43.000000)">
+                    <g id="Group-7" transform="translate(0.000000, 267.000000)">
+                        <g id="List">
+                            <g id="Group-5" transform="translate(542.000000, 0.000000)">
+                                <g id="Icon" transform="translate(0.000000, 4.000000)" stroke="#408AF8" stroke-width="2">
+                                    <g id="delivery-fast">
+                                        <polyline id="Shape" points="25 23 30 23 30 15 26 13 23 5 14 5 14 23 17 23"></polyline>
+                                        <circle id="Oval" stroke-linecap="square" cx="21" cy="23" r="4"></circle>
+                                        <polyline id="Shape" stroke-linecap="square" points="18 9 18 13 22 13"></polyline>
+                                        <path d="M10,5 L2,5" id="Shape" stroke-linecap="square"></path>
+                                        <polyline id="Shape" stroke-linecap="square" points="0 0 14 0 14 5"></polyline>
+                                        <path d="M10,10 L4,10" id="Shape" stroke-linecap="square"></path>
+                                        <path d="M10,15 L6,15" id="Shape" stroke-linecap="square"></path>
+                                    </g>
+                                </g>
+                                <text id="FREE-SHIPPING-ON-ALL" font-family="Roboto-Bold, Roboto" font-size="16" font-weight="bold" line-spacing="18" letter-spacing="2" fill="#408AF8">
+                                    <tspan x="50" y="17">FREE SHIPPING ON ALL </tspan>
+                                    <tspan x="50" y="35">ORDERS MORE THAN $50</tspan>
+                                    <tspan x="278.085938" y="35">0</tspan>
+                                </text>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <svg width="36px" height="44px" viewBox="0 0 36 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> -->
+<svg width="100%" height="100%" viewBox="0 0 36 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-Page-2" transform="translate(-75.000000, -155.000000)" fill="#2C3E50">
+            <g id="Hero-Fixed" transform="translate(0.000000, 117.000000)">
+                <g id="Left-Search" transform="translate(35.000000, 9.000000)">
+                    <g id="ic_invert_colors" transform="translate(25.000000, 24.000000)">
+                        <g id="Icon-24px">
+                            <path d="M45.735,17.8425 L33,5.1075 L20.265,17.8425 C13.245,24.8625 13.245,36.27 20.265,43.29 C23.775,46.8 28.3875,48.555 33,48.555 C37.6125,48.555 42.225,46.8 45.735,43.29 C52.755,36.27 52.755,24.8625 45.735,17.8425 L45.735,17.8425 Z M33,44.0775 C29.4,44.0775 26.0025,42.6825 23.46,40.1175 C20.895,37.5525 19.5,34.1775 19.5,30.5775 C19.5,26.9775 20.895,23.58 23.46,21.0375 L33,11.475 L33,44.0775 L33,44.0775 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

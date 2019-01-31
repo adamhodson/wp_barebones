@@ -1,0 +1,67 @@
+@font-face {
+	font-family: "Flaticon";
+	src: url("fonts/statics/flaticon.eot");
+	src: url("fonts/statics/flaticon.eot#iefix") format("embedded-opentype"),
+	url("fonts/statics/flaticon.woff") format("woff"),
+	url("fonts/statics/flaticon.ttf") format("truetype"),
+	url("fonts/statics/flaticon.svg") format("svg");
+	font-weight: normal !important;
+	font-style: normal !important;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+    font-size: 40px !important;
+	font-style: normal !important;
+	color: #ff8900 !important;
+}.flaticon-css4:before {
+	content: "\e000";
+}
+.flaticon-desktop1:before {
+	content: "\e001";
+}
+.flaticon-js:before {
+	content: "\e002";
+}
+.flaticon-smart:before {
+	content: "\e003";
+}
+
+
+
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("fonts/db/flaticon.eot");
+  src: url("fonts/db/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("fonts/db/Flaticon.woff") format("woff"),
+       url("fonts/db/Flaticon.ttf") format("truetype"),
+       url("fonts/db/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("fonts/db/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+  line-height: 44px !important;
+  font-style: normal !important;
+}
+
+
+.flaticon-check:before { content: "\f100"; color:#5cab40 !important; font-size: 25px !important;}
+.flaticon-counterclockwise:before { content: "\f101"; font-weight: bold; font-size: 35px !important;}
+.flaticon-draft:before { content: "\f102"; font-size: 35px !important;}
+.flaticon-file:before { content: "\f103"; font-weight: bold; font-size: 35px !important;}
+.flaticon-interface:before { content: "\f104"; font-weight: bold; font-size: 35px !important;}
+.flaticon-pingback:before { content: "\f105"; font-weight: bold; font-size: 35px !important;}
+.flaticon-recycling:before { content: "\f106"; font-weight: bold; font-size: 35px !important;}
+.flaticon-start-settings:before { content: "\f107"; color:#3498db !important; font-size: 30px !important;}
+.flaticon-technology:before { content: "\f108"; font-weight: bold; font-size: 35px !important;}

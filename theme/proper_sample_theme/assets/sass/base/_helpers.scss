@@ -1,0 +1,1531 @@
+// ==========================================================================
+// Base – Helpers
+// ==========================================================================
+
+.text-contain{
+  width:75%;
+  margin:0 auto;
+  p{
+    margin-bottom:24px; 
+  }
+  @media(max-width:$breakpoint-xs){
+    width:84%;
+  }
+}
+
+.small-contain{
+  width:50%;
+  margin:0 auto;
+  @media(max-width:$breakpoint-m){
+    width:75%;
+  }
+  @media(max-width:$breakpoint-xs){
+    width:84%;
+  }
+}
+
+.med-contain{
+  width:75%;
+  margin:0 auto;
+  @media(max-width:$breakpoint-xs){
+    width:84%;
+  }
+}
+
+.responsive-img{
+  img{
+    width:100%;
+    height:auto;
+  }
+  &.contain{
+    object-fit:contain;
+  }
+  &.cover{
+    object-fit:cover;
+  }
+}
+
+.opaque{
+  opacity:0;
+}
+
+.full-height{
+  height:100%;
+}
+
+// General Resets
+.no-margin { margin: 0; }
+.no-padding { padding: 0; }
+.no-padding-bottom { padding-bottom: 0 !important; }
+.no-float { float: none; }
+.no-background { background: transparent; }
+.no-border { border: 0; }
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+// Font Weights
+.font-100 { font-weight: 100; }
+.font-200 { font-weight: 200; }
+.font-300 { font-weight: 300; }
+.font-400 { font-weight: 400; }
+.font-500 { font-weight: 500; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+.font-800 { font-weight: 800; }
+.font-900 { font-weight: 900; }
+
+// Font Styles
+.font-normal { font-style: normal; }
+.font-italic { font-style: italic; }
+
+// Text Modifications
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+// Text Alignments
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+
+// Positions
+.relative { position: relative; }
+.absolute { position: absolute; }
+.static { position: static; }
+.fixed { position: fixed; }
+
+// Display Types
+.none { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+
+// Flex Types
+.flex { display: flex !important; }
+.flex-row { flex-direction: row !important; }
+.flex-column { flex-direction: column !important; }
+.flex-space-around { justify-content: space-around; }
+.flex-space-between { justify-content: space-between; }
+.flex-start { justify-content: flex-start; }
+.flex-center { justify-content: center; }
+.flex-end { justify-content: flex-end; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+.items-center{
+  align-items:center;
+}
+
+// Floats
+.left { float: left; }
+.right { float: right; }
+
+// Alignment
+.center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+ul.key-val{
+  width:100%;
+  li{
+    justify-content:flex-start;
+    text-align:right;
+    display:flex;
+    align-items:center;
+    margin-bottom:12px;
+    p{
+      // font-size:16px;
+      // line-height:18px;
+      // margin-left:24px;
+      &.key{
+        font-weight:bold;
+      }
+      &.value{
+        margin-left:auto;
+        width:50%;
+      }
+    }
+  }
+}
+
+/*
+*
+* MARGINS AND PADDING IN BASE 10 MEASUREMENTS 
+*
+*/
+
+$spaceCount: 20;
+
+//BASE 10 MARGIN HELPERS. Margin from 0 - 150
+@mixin base-ten-margin {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .margin-#{$class} { 
+          margin: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+        .margin-#{$class}-t { 
+            margin: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .margin-#{$class}-m { 
+            margin: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-margin;
+//BASE 10 MARGIN HELPERS
+
+
+//BASE 10 MARGIN TOP HELPERS. Margin Top from 0 - 150
+@mixin base-ten-margin-top {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .margin-top-#{$class} { 
+          margin-top: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+        .margin-top-#{$class}-t { 
+            margin-top: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .margin-top-#{$class}-m { 
+            margin-top: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-margin-top;
+//BASE 10 MARGIN TOP HELPERS
+
+
+//BASE 10 MARGIN BOTTOM HELPERS. Margin Top from 0 - 150
+@mixin base-ten-margin-bottom {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .margin-bottom-#{$class} { 
+          margin-bottom: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+        .margin-bottom-#{$class}-t { 
+            margin-bottom: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .margin-bottom-#{$class}-m { 
+            margin-bottom: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-margin-bottom;
+
+//BASE 10 MARGIN BOTTOM HELPERS
+
+
+
+//BASE 10 MARGIN TOP HELPERS. Margin Top from 0 - 150
+@mixin base-ten-margin-left {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .margin-left-#{$class} { 
+          margin-left: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+        .margin-left-#{$class}-t { 
+            margin-left: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .margin-left-#{$class}-m { 
+            margin-left: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-margin-left;
+//BASE 10 MARGIN TOP HELPERS
+
+
+//BASE 10 MARGIN BOTTOM HELPERS. Margin Top from 0 - 150
+@mixin base-ten-margin-right {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .margin-right-#{$class} { 
+          margin-right: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+        .margin-right-#{$class}-t { 
+          margin-right: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .margin-right-#{$class}-m { 
+            margin-right: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-margin-right;
+
+//BASE 10 MARGIN BOTTOM HELPERS
+
+
+
+//Padding
+
+
+//BASE 10 MARGIN HELPERS. Margin from 0 - 150
+@mixin base-ten-padding {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .pad-#{$class} { 
+          padding-top: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+         .pad-#{$class}-t { 
+            padding-top: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .pad-#{$class}-m { 
+          padding-top: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-padding;
+//BASE 10 MARGIN HELPERS
+
+
+//BASE 10 MARGIN TOP HELPERS. Margin Top from 0 - 150
+@mixin base-ten-padding-top {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .pad-top-#{$class} { 
+          padding-top: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+        .pad-top-#{$class}-t { 
+            padding-top: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .pad-top-#{$class}-m { 
+            padding-top: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-padding-top;
+//BASE 10 MARGIN TOP HELPERS
+
+
+//BASE 10 MARGIN BOTTOM HELPERS. Margin Top from 0 - 150
+@mixin base-ten-padding-bottom {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .pad-bottom-#{$class} { 
+          padding-bottom: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+        .pad-bottom-#{$class}-t { 
+            padding-bottom: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .pad-bottom-#{$class}-m { 
+            padding-bottom: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-padding-bottom;
+
+//BASE 10 MARGIN BOTTOM HELPERS
+
+
+
+//BASE 10 MARGIN TOP HELPERS. Margin Top from 0 - 150
+@mixin base-ten-padding-left {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .pad-l-#{$class} { 
+          padding-left: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+        .pad-l-#{$class}-t { 
+            padding-left: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .pad-l-#{$class}-m { 
+            padding-left: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-padding-left;
+//BASE 10 MARGIN TOP HELPERS
+
+
+//BASE 10 MARGIN BOTTOM HELPERS. Margin Top from 0 - 150
+@mixin base-ten-padding-right {
+  @for $i from 0 through $spaceCount {
+    $class: $i * 10;
+      .pad-r-#{$class} { 
+          padding-right: calc(#{$i} * 10px);
+      }
+      @media (max-width:1024px){
+        .pad-r-#{$class}-t { 
+          padding-right: calc(#{$i} * 10px);
+        }
+      }
+      @media (max-width:768px){
+        .pad-r-#{$class}-m { 
+          padding-right: calc(#{$i} * 10px);
+        }
+      }
+  }
+}
+
+@include base-ten-padding-right;
+
+//BASE 10 MARGIN BOTTOM HELPERS
+
+
+
+/*
+*
+* MARGINS AND PADDING BASED IN VERTICAL RHYTHM SPACING 
+*
+*/
+
+
+//VERTICAL RHYTHM MARGIN HELPERS (6PX INCREMENTS). Margin from 0 - 15 * Base Height
+@mixin vr-margin {
+  @for $i from 0 through $spaceCount {
+    $size: $i;
+      .margin-#{$size} {         
+          margin-top: calc(#{$base_height} * #{$size}) ;
+      }
+      @media (max-width:1024px){
+        .margin-#{$size}-t {         
+          margin-top: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .margin-#{$size}-m {         
+          margin-top: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-margin;
+//End Margin top
+
+
+//VERTICAL RHYTHM MARGIN TOP HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+@mixin vr-topmargin{
+  @for $i from 0 through $spaceCount {    
+    $size: $i;
+      .topmargin-#{$size} {         
+          margin-top: calc(#{$base_height} * #{$size});
+      }
+      @media (max-width:1024px){
+        .topmargin-#{$size}-t {         
+          margin-top: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .topmargin-#{$size}-m {         
+          margin-top: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-topmargin;
+//End Margin top
+
+
+//VERTICAL RHYTHM MARGIN BOTTOM HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+@mixin vr-bottommargin {
+  @for $i from 0 through $spaceCount {
+    $size: $i;
+      .bottommargin-#{$size} {         
+          margin-bottom: calc(#{$base_height} * #{$size});
+      }
+      @media (max-width:1024px){
+        .bottommargin-#{$size}-t {         
+          margin-bottom: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .bottommargin-#{$size}-m {         
+          margin-bottom: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-bottommargin;
+//End Margin Bottom
+
+
+//VERTICAL RHYTHM MARGIN LEFT HELPERS (6PX INCREMENTS). Margin Left from 0 - 15 * Base Height
+@mixin vr-leftmargin {
+  @for $i from 0 through $spaceCount {
+    $size: $i;
+      .leftmargin-#{$size} {         
+          margin-left: calc(#{$base_height} * #{$size});
+      }
+      @media (max-width:1024px){
+        .leftmargin-#{$size}-t {         
+          margin-left: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .leftmargin-#{$size}-m {         
+          margin-left: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-leftmargin;
+//End Margin Left
+
+
+//VERTICAL RHYTHM MARGIN RIGHT HELPERS (6PX INCREMENTS). Margin Right from 0 - 15 * Base Height
+@mixin vr-rightmargin {
+  @for $i from 0 through $spaceCount {
+    $size: $i;
+      .rightmargin-#{$size} {         
+          margin-right: calc(#{$base_height} * #{$size});
+      }
+      @media (max-width:1024px){
+        .rightmargin-#{$size}-t {         
+          margin-right: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .rightmargin-#{$size}-m {         
+          margin-right: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-rightmargin;
+//End Margin Bottom
+
+
+
+//Padding
+
+
+
+//VERTICAL RHYTHM MARGIN HELPERS (6PX INCREMENTS). Margin from 0 - 15 * Base Height
+@mixin vr-pad {
+  @for $i from 0 through $spaceCount {
+    $size: $i;
+      .pad-#{$size} {         
+          padding-top: calc(#{$base_height} * #{$size});
+      }
+      @media (max-width:1024px){
+        .pad-#{$size}-t {         
+          padding-top: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .pad-#{$size}-m {         
+          padding-top: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-pad;
+//End Margin top
+
+
+//VERTICAL RHYTHM MARGIN TOP HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+@mixin vr-toppad {
+  @for $i from 0 through $spaceCount {
+    $size: $i;
+      .toppad-#{$size} {         
+          padding-top: calc(#{$base_height} * #{$size});
+      }
+      @media (max-width:1024px){
+        .toppad-#{$size}-t {         
+          padding-top: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .toppad-#{$size}-m {         
+          padding-top: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-toppad;
+//End Margin top
+
+
+//VERTICAL RHYTHM MARGIN BOTTOM HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+@mixin vr-bottompad {
+  @for $i from 0 through $spaceCount {
+    $size: $i;
+      .bottompad-#{$size} {         
+          padding-bottom: calc(#{$base_height} * #{$size});
+      }
+      @media (max-width:1024px){
+        .bottompad-#{$size}-t {         
+          padding-bottom: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .bottompad-#{$size}-m {         
+          padding-bottom: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-bottompad;
+//End Margin Bottom
+
+
+//VERTICAL RHYTHM MARGIN LEFT HELPERS (6PX INCREMENTS). Margin Left from 0 - 15 * Base Height
+@mixin vr-leftpad {
+  @for $i from 0 through $spaceCount {
+    $size: $i;
+      .leftpad-#{$size} {         
+          padding-left: calc(#{$base_height} * #{$size});
+      }
+      @media (max-width:1024px){
+        .leftpad-#{$size}-t {         
+          padding-left: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .leftpad-#{$size}-m {         
+          padding-left: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-leftpad;
+//End Margin Left
+
+
+//VERTICAL RHYTHM MARGIN RIGHT HELPERS (6PX INCREMENTS). Margin Right from 0 - 15 * Base Height
+@mixin vr-rightpad {
+  @for $i from 0 through $spaceCount {
+    $size: $i;
+      .rightpad-#{$size} {         
+          padding-right: calc(#{$base_height} * #{$size});
+      }
+      @media (max-width:1024px){
+        .rightpad-#{$size}-t {         
+          padding-right: calc(#{$base_height} * #{$size});
+        }
+      }
+      @media (max-width:768px){
+        .rightpad-#{$size}-m {         
+          padding-right: calc(#{$base_height} * #{$size});
+        }
+      }
+  }
+}
+
+@include vr-rightpad;
+//End Margin Bottom
+
+
+//TABLET
+
+
+@media (max-width:1024px){
+  
+  //VERTICAL RHYTHM MARGIN HELPERS (6PX INCREMENTS). Margin from 0 - 15 * Base Height
+  @mixin vr-margin {
+    @for $i from 0 through $spaceCount {
+      $size: $i;            
+      .margin-#{$size}-t {         
+        margin-top: calc(#{$base_height} * #{$size});
+      }        
+    }
+  }
+
+  @include vr-margin;
+  //End Margin top
+
+
+  //VERTICAL RHYTHM MARGIN TOP HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+  @mixin vr-topmargin{
+    @for $i from 0 through $spaceCount {    
+      $size: $i;
+      .topmargin-#{$size}-t {         
+        margin-top: calc(#{$base_height} * #{$size});
+      }
+    }
+  }
+
+  @include vr-topmargin;
+  //End Margin top
+
+
+  //VERTICAL RHYTHM MARGIN BOTTOM HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+  @mixin vr-bottommargin {
+    @for $i from 0 through $spaceCount {
+      $size: $i;
+      .bottommargin-#{$size}-t {         
+        margin-bottom: calc(#{$base_height} * #{$size});
+      }
+    }
+  }
+
+  @include vr-bottommargin;
+  //End Margin Bottom
+
+
+  //VERTICAL RHYTHM MARGIN LEFT HELPERS (6PX INCREMENTS). Margin Left from 0 - 15 * Base Height
+  @mixin vr-leftmargin {
+    @for $i from 0 through $spaceCount {
+      $size: $i;
+      .leftmargin-#{$size}-t {         
+        margin-left: calc(#{$base_height} * #{$size});
+      }
+    }
+  }
+
+  @include vr-leftmargin;
+  //End Margin Left
+
+
+  //VERTICAL RHYTHM MARGIN RIGHT HELPERS (6PX INCREMENTS). Margin Right from 0 - 15 * Base Height
+  @mixin vr-rightmargin {
+    @for $i from 0 through $spaceCount {
+      $size: $i;
+      .rightmargin-#{$size}-t {         
+        margin-right: calc(#{$base_height} * #{$size});
+      }
+    }
+  }
+
+  @include vr-rightmargin;
+  //End Margin Bottom
+
+
+
+  //Padding
+
+
+
+  //VERTICAL RHYTHM MARGIN HELPERS (6PX INCREMENTS). Margin from 0 - 15 * Base Height
+  @mixin vr-pad {
+    @for $i from 0 through $spaceCount {
+      $size: $i;
+      .pad-#{$size}-t {         
+        padding-top: calc(#{$base_height} * #{$size});
+      }
+    }
+  }
+
+  @include vr-pad;
+  //End Margin top
+
+
+  //VERTICAL RHYTHM MARGIN TOP HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+  @mixin vr-toppad {
+    @for $i from 0 through $spaceCount {
+      $size: $i;
+      .toppad-#{$size}-t {         
+        padding-top: calc(#{$base_height} * #{$size});
+      }
+    }
+  }
+
+  @include vr-toppad;
+  //End Margin top
+
+
+  //VERTICAL RHYTHM MARGIN BOTTOM HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+  @mixin vr-bottompad {
+    @for $i from 0 through $spaceCount {
+      $size: $i;
+      .bottompad-#{$size}-t {         
+        padding-bottom: calc(#{$base_height} * #{$size});
+      }
+    }
+  }
+
+  @include vr-bottompad;
+  //End Margin Bottom
+
+
+  //VERTICAL RHYTHM MARGIN LEFT HELPERS (6PX INCREMENTS). Margin Left from 0 - 15 * Base Height
+  @mixin vr-leftpad {
+    @for $i from 0 through $spaceCount {
+      $size: $i;
+      .leftpad-#{$size}-t {         
+        padding-left: calc(#{$base_height} * #{$size});
+      }
+    }
+  }
+
+  @include vr-leftpad;
+  //End Margin Left
+
+
+  //VERTICAL RHYTHM MARGIN RIGHT HELPERS (6PX INCREMENTS). Margin Right from 0 - 15 * Base Height
+  @mixin vr-rightpad {
+    @for $i from 0 through $spaceCount {
+      $size: $i;
+      .rightpad-#{$size}-t {         
+        padding-right: calc(#{$base_height} * #{$size});
+      }
+    }
+  }
+
+  @include vr-rightpad;
+  //End Margin Bottom
+
+}
+
+
+//MOBILE
+
+
+@media (max-width:768px){
+
+    
+    //VERTICAL RHYTHM MARGIN HELPERS (6PX INCREMENTS). Margin from 0 - 15 * Base Height
+    @mixin vr-margin {
+      @for $i from 0 through $spaceCount {
+        $size: $i;
+        .margin-#{$size}-m {         
+          margin-top: calc(#{$base_height} * #{$size});
+        }
+      }
+    }
+
+    @include vr-margin;
+    //End Margin top
+
+
+    //VERTICAL RHYTHM MARGIN TOP HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+    @mixin vr-topmargin{
+      @for $i from 0 through $spaceCount {    
+        $size: $i;
+        .topmargin-#{$size}-m {         
+          margin-top: calc(#{$base_height} * #{$size});
+        }
+      }
+    }
+
+    @include vr-topmargin;
+    //End Margin top
+
+
+    //VERTICAL RHYTHM MARGIN BOTTOM HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+    @mixin vr-bottommargin {
+      @for $i from 0 through $spaceCount {
+        $size: $i;
+         .bottommargin-#{$size}-m {         
+            margin-bottom: calc(#{$base_height} * #{$size});
+          }
+      }
+    }
+
+    @include vr-bottommargin;
+    //End Margin Bottom
+
+
+    //VERTICAL RHYTHM MARGIN LEFT HELPERS (6PX INCREMENTS). Margin Left from 0 - 15 * Base Height
+    @mixin vr-leftmargin {
+      @for $i from 0 through $spaceCount {
+        $size: $i;
+        .leftmargin-#{$size}-m {         
+          margin-left: calc(#{$base_height} * #{$size});
+        }
+      }
+    }
+
+    @include vr-leftmargin;
+    //End Margin Left
+
+
+    //VERTICAL RHYTHM MARGIN RIGHT HELPERS (6PX INCREMENTS). Margin Right from 0 - 15 * Base Height
+    @mixin vr-rightmargin {
+      @for $i from 0 through $spaceCount {
+        $size: $i;
+        .rightmargin-#{$size}-m {         
+          margin-right: calc(#{$base_height} * #{$size});
+        }
+      }
+    }
+
+    @include vr-rightmargin;
+    //End Margin Bottom
+
+
+
+    //Padding
+
+
+
+    //VERTICAL RHYTHM MARGIN HELPERS (6PX INCREMENTS). Margin from 0 - 15 * Base Height
+    @mixin vr-pad {
+      @for $i from 0 through $spaceCount {
+        $size: $i;
+        .pad-#{$size}-m {         
+          padding-top: calc(#{$base_height} * #{$size});
+        }
+      }
+    }
+
+    @include vr-pad;
+    //End Margin top
+
+
+    //VERTICAL RHYTHM MARGIN TOP HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+    @mixin vr-toppad {
+      @for $i from 0 through $spaceCount {
+        $size: $i;
+        .toppad-#{$size}-m {         
+          padding-top: calc(#{$base_height} * #{$size});
+        }
+      }
+    }
+
+    @include vr-toppad;
+    //End Margin top
+
+
+    //VERTICAL RHYTHM MARGIN BOTTOM HELPERS (6PX INCREMENTS). Margin Top from 0 - 15 * Base Height
+    @mixin vr-bottompad {
+      @for $i from 0 through $spaceCount {
+        $size: $i;
+        .bottompad-#{$size}-m {         
+          padding-bottom: calc(#{$base_height} * #{$size});
+        }
+      }
+    }
+
+    @include vr-bottompad;
+    //End Margin Bottom
+
+
+    //VERTICAL RHYTHM MARGIN LEFT HELPERS (6PX INCREMENTS). Margin Left from 0 - 15 * Base Height
+    @mixin vr-leftpad {
+      @for $i from 0 through $spaceCount {
+        $size: $i;
+        .leftpad-#{$size}-m {         
+          padding-left: calc(#{$base_height} * #{$size});
+        }
+      }
+    }
+
+    @include vr-leftpad;
+    //End Margin Left
+
+
+    //VERTICAL RHYTHM MARGIN RIGHT HELPERS (6PX INCREMENTS). Margin Right from 0 - 15 * Base Height
+    @mixin vr-rightpad {
+      @for $i from 0 through $spaceCount {
+        $size: $i;
+        .rightpad-#{$size}-m {         
+          padding-right: calc(#{$base_height} * #{$size});
+        }
+      }
+    }
+
+    @include vr-rightpad;
+    //End Margin Bottom
+
+}
+
+.hide{
+  display:none;
+}
+
+// Hide only visually, but have it available for screenreaders: : h5bp.com/v
+.sr {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.auto-width{
+  width:auto;
+  display:inline-block;
+}  
+
+// Lists
+.list-unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+.list-inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+}
+
+// Images
+.img-fluid { max-width: 100%; }
+
+// Form
+.field { width: 100%; }
+
+// Grouped Form Fields
+.form-group {
+  overflow: hidden;
+  label {
+    display: inline-block;
+    padding-top: 8px;
+  }
+}
+
+// Disable Element
+.disabled, [disabled] {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+// Checkbox and Radio
+.checkbox,
+.radio {
+  display: inline-block;
+  position: relative;
+  label {
+    padding-left: 20px;
+    padding-top: 0;
+    display: inline-block;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+}
+
+// Pretty Select
+.select {
+  position: relative;
+  display: block;
+  &:before {
+    content: "";
+    border: 6px solid transparent;
+    border-top-color: #676767;
+    top: 50%;
+    right: 10px;
+    margin-top: -3px;
+    pointer-events: none;
+    position: absolute;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 42px;
+    width: 100%;
+    padding: 0 10px;
+    line-height: normal;
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+    display: block;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+  select:focus { border-color: $base_color; }
+  select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 rgba(#000, .1);
+    border-color: $base_color;
+  }
+}
+
+// Animations
+.animation { @include animation(1s); }
+.animation-infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+// Tablet Helpers
+@include breakpoint(m) {
+  
+  // General Resets
+  .no-float-m { float: none; }
+  .no-padding-m { padding: 0; }
+  .no-margin-m { margin: 0; }
+
+  // Positions
+  .relative-m { position: relative; }
+  .absolute-m { position: absolute; }
+  .static-m { position: static; }
+  .fixed-m { position: fixed; }
+
+  // Display Types
+  .none-m { display: none; }
+  .block-m { display: block; }
+  .inline-block-m { display: inline-block; }
+  .inline-m { display: inline; }
+
+  // Flex Types
+  .flex-m { display: flex; }
+  .flex-row-m { flex-direction: row; }
+  .flex-column-m { flex-direction: column; }
+  .flex-space-around-m { justify-content: space-around; }
+  .flex-space-between-m { justify-content: space-between; }
+  .flex-start-m { justify-content: flex-start; }
+  .flex-center-m { justify-content: center; }
+  .flex-end-m { justify-content: flex-end; }
+  .flex-wrap-m { flex-wrap: wrap; }
+  .flex-nowrap-m { flex-wrap: nowrap; }
+
+  // Floats
+  .left-m { float: left; }
+  .right-m { float: right; }
+  
+  // Alignment
+  .center-m {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Text Alignments
+  .text-left-m { text-align: left; }
+  .text-right-m { text-align: right; }
+  .text-center-m { text-align: center; }
+  .text-justify-m { text-align: justify; }
+
+  // Grid Resets
+  .no-col-m {
+    width: auto;
+    float: none;
+  }
+  .no-push-m, .no-pull-m { left: 0; }
+
+  // Padding Helpers
+  .pad-top-0-m { padding-top: 0; }
+  .pad-top-5-m { padding-top: 5px; }
+  .pad-top-10-m { padding-top: 10px; }
+  .pad-top-15-m { padding-top: 15px; }
+  .pad-top-20-m { padding-top: 20px; }
+  .pad-top-25-m { padding-top: 25px; }
+  .pad-top-30-m { padding-top: 30px; }
+  .pad-top-35-m { padding-top: 35px; }
+  .pad-top-40-m { padding-top: 40px; }
+  .pad-top-45-m { padding-top: 45px; }
+  .pad-top-50-m { padding-top: 50px; }
+  .pad-top-55-m { padding-top: 55px; }
+  .pad-top-60-m { padding-top: 60px; }
+  .pad-bottom-0-m { padding-bottom: 0; }
+  .pad-bottom-5-m { padding-bottom: 5px; }
+  .pad-bottom-10-m { padding-bottom: 10px; }
+  .pad-bottom-15-m { padding-bottom: 15px; }
+  .pad-bottom-20-m { padding-bottom: 20px; }
+  .pad-bottom-25-m { padding-bottom: 25px; }
+  .pad-bottom-30-m { padding-bottom: 30px; }
+  .pad-bottom-35-m { padding-bottom: 35px; }
+  .pad-bottom-40-m { padding-bottom: 40px; }
+  .pad-bottom-45-m { padding-bottom: 45px; }
+  .pad-bottom-50-m { padding-bottom: 50px; }
+  .pad-bottom-55-m { padding-bottom: 55px; }
+  .pad-bottom-60-m { padding-bottom: 60px; }
+  .pad-0-m { padding: 0; }
+  .pad-5-m { padding: 5px; }
+  .pad-10-m { padding: 10px; }
+  .pad-15-m { padding: 15px; }
+  .pad-20-m { padding: 20px; }
+  .pad-25-m { padding: 25px; }
+  .pad-30-m { padding: 30px; }
+  .pad-35-m { padding: 35px; }
+  .pad-40-m { padding: 40px; }
+  .pad-45-m { padding: 45px; }
+  .pad-50-m { padding: 50px; }
+  .pad-55-m { padding: 55px; }
+  .pad-60-m { padding: 60px; }
+}
+
+// Desktop Helpers
+@include breakpoint(l) {
+  
+  // General Resets
+  .no-float-l { float: none; }
+  .no-padding-l { padding: 0; }
+  .no-margin-l { margin: 0; }
+
+  // Positions
+  .relative-l { position: relative; }
+  .absolute-l { position: absolute; }
+  .static-l { position: static; }
+  .fixed-l { position: fixed; }
+
+  // Display Types
+  .none-l { display: none; }
+  .block-l { display: block; }
+  .inline-block-l { display: inline-block; }
+  .inline-l { display: inline; }
+
+  // Flex Types
+  .flex-l { display: flex; }
+  .flex-row-l { flex-direction: row; }
+  .flex-column-l { flex-direction: column; }
+  .flex-space-around-l { justify-content: space-around; }
+  .flex-space-between-l { justify-content: space-between; }
+  .flex-start-l { justify-content: flex-start; }
+  .flex-center-l { justify-content: center; }
+  .flex-end-l { justify-content: flex-end; }
+  .flex-wrap-l { flex-wrap: wrap; }
+  .flex-nowrap-l { flex-wrap: nowrap; }
+
+  // Floats
+  .left-l { float: left; }
+  .right-l { float: right; }
+
+  // Alignment
+  .center-l {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Text Alignments
+  .text-left-l { text-align: left; }
+  .text-right-l { text-align: right; }
+  .text-center-l { text-align: center; }
+  .text-justify-l { text-align: justify; }
+
+  // Grid Resets
+  .no-col-l {
+    width: auto;
+    float: none;
+  }
+  .no-push-l, .no-pull-l { left: 0; }
+
+  // Padding Helpers
+  .pad-top-0-l { padding-top: 0; }
+  .pad-top-5-l { padding-top: 5px; }
+  .pad-top-10-l { padding-top: 10px; }
+  .pad-top-15-l { padding-top: 15px; }
+  .pad-top-20-l { padding-top: 20px; }
+  .pad-top-25-l { padding-top: 25px; }
+  .pad-top-30-l { padding-top: 30px; }
+  .pad-top-35-l { padding-top: 35px; }
+  .pad-top-40-l { padding-top: 40px; }
+  .pad-top-45-l { padding-top: 45px; }
+  .pad-top-50-l { padding-top: 50px; }
+  .pad-top-55-l { padding-top: 55px; }
+  .pad-top-60-l { padding-top: 60px; }
+  .pad-bottom-0-l { padding-bottom: 0; }
+  .pad-bottom-5-l { padding-bottom: 5px; }
+  .pad-bottom-10-l { padding-bottom: 10px; }
+  .pad-bottom-15-l { padding-bottom: 15px; }
+  .pad-bottom-20-l { padding-bottom: 20px; }
+  .pad-bottom-25-l { padding-bottom: 25px; }
+  .pad-bottom-30-l { padding-bottom: 30px; }
+  .pad-bottom-35-l { padding-bottom: 35px; }
+  .pad-bottom-40-l { padding-bottom: 40px; }
+  .pad-bottom-45-l { padding-bottom: 45px; }
+  .pad-bottom-50-l { padding-bottom: 50px; }
+  .pad-bottom-55-l { padding-bottom: 55px; }
+  .pad-bottom-60-l { padding-bottom: 60px; }
+  .pad-0-l { padding: 0; }
+  .pad-5-l { padding: 5px; }
+  .pad-10-l { padding: 10px; }
+  .pad-15-l { padding: 15px; }
+  .pad-20-l { padding: 20px; }
+  .pad-25-l { padding: 25px; }
+  .pad-30-l { padding: 30px; }
+  .pad-35-l { padding: 35px; }
+  .pad-40-l { padding: 40px; }
+  .pad-45-l { padding: 45px; }
+  .pad-50-l { padding: 50px; }
+  .pad-55-l { padding: 55px; }
+  .pad-60-l { padding: 60px; }
+}
+
+// HD Helpers
+@include breakpoint(xl) {
+
+  // General Resets
+  .no-float-xl { float: none; }
+  .no-padding-xl { padding: 0; }
+  .no-margin-xl { margin: 0; }
+
+  // Positions
+  .relative-xl { position: relative; }
+  .absolute-xl { position: absolute; }
+  .static-xl { position: static; }
+  .fixed-xl { position: fixed; }
+
+  // Display Types
+  .none-xl { display: none; }
+  .block-xl { display: block; }
+  .inline-block-xl { display: inline-block; }
+  .inline-xl { display: inline; }
+
+  // Flex Types
+  .flex-xl { display: flex; }
+  .flex-row-xl { flex-direction: row; }
+  .flex-column-xl { flex-direction: column; }
+  .flex-space-around-xl { justify-content: space-around; }
+  .flex-space-between-xl { justify-content: space-between; }
+  .flex-start-xl { justify-content: flex-start; }
+  .flex-center-xl { justify-content: center; }
+  .flex-end-xl { justify-content: flex-end; }
+  .flex-wrap-xl { flex-wrap: wrap; }
+  .flex-nowrap-xl { flex-wrap: nowrap; }
+
+  // Floats
+  .left-xl { float: left; }
+  .right-xl { float: right; }
+
+  // Alignment
+  .center-xl {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Text Alignments
+  .text-left-xl { text-align: left; }
+  .text-right-xl { text-align: right; }
+  .text-center-xl { text-align: center; }
+  .text-justify-xl { text-align: justify; }
+
+  // Grid Resets
+  .no-col-xl {
+    width: auto;
+    float: none;
+  }
+  .no-push-xl, .no-pull-xl { left: 0; }
+
+  // Padding Helpers
+  .pad-top-0-xl { padding-top: 0; }
+  .pad-top-5-xl { padding-top: 5px; }
+  .pad-top-10-xl { padding-top: 10px; }
+  .pad-top-15-xl { padding-top: 15px; }
+  .pad-top-20-xl { padding-top: 20px; }
+  .pad-top-25-xl { padding-top: 25px; }
+  .pad-top-30-xl { padding-top: 30px; }
+  .pad-top-35-xl { padding-top: 35px; }
+  .pad-top-40-xl { padding-top: 40px; }
+  .pad-top-45-xl { padding-top: 45px; }
+  .pad-top-50-xl { padding-top: 50px; }
+  .pad-top-55-xl { padding-top: 55px; }
+  .pad-top-60-xl { padding-top: 60px; }
+  .pad-bottom-0-xl { padding-bottom: 0; }
+  .pad-bottom-5-xl { padding-bottom: 5px; }
+  .pad-bottom-10-xl { padding-bottom: 10px; }
+  .pad-bottom-15-xl { padding-bottom: 15px; }
+  .pad-bottom-20-xl { padding-bottom: 20px; }
+  .pad-bottom-25-xl { padding-bottom: 25px; }
+  .pad-bottom-30-xl { padding-bottom: 30px; }
+  .pad-bottom-35-xl { padding-bottom: 35px; }
+  .pad-bottom-40-xl { padding-bottom: 40px; }
+  .pad-bottom-45-xl { padding-bottom: 45px; }
+  .pad-bottom-50-xl { padding-bottom: 50px; }
+  .pad-bottom-55-xl { padding-bottom: 55px; }
+  .pad-bottom-60-xl { padding-bottom: 60px; }
+  .pad-0-xl { padding: 0; }
+  .pad-5-xl { padding: 5px; }
+  .pad-10-xl { padding: 10px; }
+  .pad-15-xl { padding: 15px; }
+  .pad-20-xl { padding: 20px; }
+  .pad-25-xl { padding: 25px; }
+  .pad-30-xl { padding: 30px; }
+  .pad-35-xl { padding: 35px; }
+  .pad-40-xl { padding: 40px; }
+  .pad-45-xl { padding: 45px; }
+  .pad-50-xl { padding: 50px; }
+  .pad-55-xl { padding: 55px; }
+  .pad-60-xl { padding: 60px; }
+}
+
+// Print Helpers
+@media print {
+
+  // General Resets
+  .no-float-print { float: none; }
+  .no-padding-print { padding: 0; }
+  .no-margin-print { margin: 0; }
+
+  // Display Types
+  .none-print { display: none; }
+  .block-print { display: block; }
+  .inline-block-print { display: inline-block; }
+  .inline-print { display: inline; }
+
+  // Text Alignments
+  .text-left-print { text-align: left; }
+  .text-right-print { text-align: right; }
+  .text-center-print { text-align: center; }
+  .text-justify-print { text-align: justify; }
+
+  // Grid Resets
+  .no-col-print {
+    width: auto;
+    float: none;
+  }
+  .no-push-print, .no-pull-print { left: 0; }
+
+  // Padding Helpers
+  .pad-top-0-print { padding-top: 0; }
+  .pad-top-5-print { padding-top: 5px; }
+  .pad-top-10-print { padding-top: 10px; }
+  .pad-top-15-print { padding-top: 15px; }
+  .pad-top-20-print { padding-top: 20px; }
+  .pad-top-25-print { padding-top: 25px; }
+  .pad-top-30-print { padding-top: 30px; }
+  .pad-top-35-print { padding-top: 35px; }
+  .pad-top-40-print { padding-top: 40px; }
+  .pad-top-45-print { padding-top: 45px; }
+  .pad-top-50-print { padding-top: 50px; }
+  .pad-top-55-print { padding-top: 55px; }
+  .pad-top-60-print { padding-top: 60px; }
+  .pad-bottom-0-print { padding-bottom: 0; }
+  .pad-bottom-5-print { padding-bottom: 5px; }
+  .pad-bottom-10-print { padding-bottom: 10px; }
+  .pad-bottom-15-print { padding-bottom: 15px; }
+  .pad-bottom-20-print { padding-bottom: 20px; }
+  .pad-bottom-25-print { padding-bottom: 25px; }
+  .pad-bottom-30-print { padding-bottom: 30px; }
+  .pad-bottom-35-print { padding-bottom: 35px; }
+  .pad-bottom-40-print { padding-bottom: 40px; }
+  .pad-bottom-45-print { padding-bottom: 45px; }
+  .pad-bottom-50-print { padding-bottom: 50px; }
+  .pad-bottom-55-print { padding-bottom: 55px; }
+  .pad-bottom-60-print { padding-bottom: 60px; }
+  .pad-0-print { padding: 0; }
+  .pad-5-print { padding: 5px; }
+  .pad-10-print { padding: 10px; }
+  .pad-15-print { padding: 15px; }
+  .pad-20-print { padding: 20px; }
+  .pad-25-print { padding: 25px; }
+  .pad-30-print { padding: 30px; }
+  .pad-35-print { padding: 35px; }
+  .pad-40-print { padding: 40px; }
+  .pad-45-print { padding: 45px; }
+  .pad-50-print { padding: 50px; }
+  .pad-55-print { padding: 55px; }
+  .pad-60-print { padding: 60px; }
+}
+
+.rightborder{
+  border-right: 1px solid $light_border_color;
+}  
+.leftborder{
+  border-left: 1px solid $light_border_color;
+}  
+.topborder{
+  border-top: 1px solid $light_border_color;
+}   
+.bottomborder{
+  border-bottom: 1px solid $light_border_color;
+}  
+
+.rightborder-trans{
+  border-right: 1px solid rgba($light_color, .25);
+}  
+.leftborder-trans{
+  border-left: 1px solid rgba($light_color, .25);
+}  
+.topborder-trans{
+  border-top: 1px solid rgba($light_color, .25);
+}   
+.bottomborder-trans{
+  border-bottom: 1px solid rgba($light_color, .25);
+}  
+
+
+@media (max-width:768px){
+
+  .rightborder-m{
+    border-right: 1px solid $light_border_color;
+  }  
+  .leftborder-m{
+    border-left: 1px solid $light_border_color;
+  }  
+  .topborder-m{
+    border-top: 1px solid $light_border_color;
+  }   
+  .bottomborder-m{
+    border-bottom: 1px solid $light_border_color;
+  }  
+
+  .rightborder-trans-m{
+    border-right: 1px solid rgba($light_color, .25);
+  }  
+  .leftborder-trans-m{
+    border-left: 1px solid rgba($light_color, .25);
+  }  
+  .topborder-trans-m{
+    border-top: 1px solid rgba($light_color, .25);
+  }   
+  .bottomborder-trans-m{
+    border-bottom: 1px solid rgba($light_color, .25);
+  }  
+
+  .no-border-m{
+    border:0 !important;
+  }
+  .no-right-border-m{
+    border-right:0 !important;
+  }
+  .no-left-border-m{
+    border-left:0 !important;
+  }
+  .no-bottom-border-m{
+    border-bottom:0 !important;
+  }
+}
