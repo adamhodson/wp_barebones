@@ -11,10 +11,10 @@ get_header();
 <?php if (have_posts()) : while (have_posts()) : the_post();?>
 
 <div id="page-wrapper"> 
-    <div class="container-fluid">
-    	<div class="white-box m-t-30">
+    <div class="container">
+    	
     		<?php the_content(); ?>
-    	</div>        
+    	
     </div>
 </div>
 
