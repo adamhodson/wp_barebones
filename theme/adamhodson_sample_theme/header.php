@@ -14,5 +14,3 @@
 	
 </header>
 
-<div id="header-trigger"></div>
-
